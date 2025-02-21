@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+    <form id="imageForm">
+        <input type="text" id="imageUrl" placeholder="Enter image URL" required>
+        <input type="text" id="imageTitle" placeholder="Enter image title" required>
+        <textarea id="imageDescription" placeholder="Enter image description" rows="3" required></textarea>
+        <select id="imageTag" required>
+            <option value="">Select a tag</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>
+        <input type="submit" value="Add Image">
+    </form>
+
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        document.getElementById('imageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const imageUrl = document.getElementById('imageUrl').value;
+            const imageTitle = document.getElementById('imageTitle').value;
+            const imageDescription = document.getElementById('imageDescription').value;
+            const imageTag = document.getElementById('imageTag').value;
+
+            const gallery = document.getElementById('gallery');
+
+            const card = document.createElement('div');
+            card.className = 'image-card';
+
+            const imgElement = document.createElement('img');
+            imgElement.src = imageUrl;
+            imgElement.alt = imageTitle;
+
+            const titleElement = document.createElement('div');
+            titleElement.className = 'image-title';
+            titleElement.textContent = imageTitle;
+
+            const descriptionElement = document.createElement('div');
+            descriptionElement.textContent = imageDescription;
+
+            const tagElement = document.createElement('div');
+            tagElement.textContent = `Tag: ${imageTag}`;
+
+            card.appendChild(imgElement);
+            card.appendChild(titleElement);
+            card.appendChild(descriptionElement);
+            card.appendChild(tagElement);
+            gallery.appendChild(card);
+
+            
+        });
+    </script>
+
+</body>
+</html>
