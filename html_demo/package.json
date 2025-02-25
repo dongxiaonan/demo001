@@ -1,0 +1,15 @@
+{
+  "name": "html_demo",
+  "version": "1.0.0",
+  "description": "Build a page from [link](https://www.pinterest.com/search/pins/?q=dinner%20party&rs=guide&journey_depth=1&source_module_id=OB_winter%2520dinner%2520party_4fbc39bc-0c25-4c38-b678-2f1b2b6540eb&selected_one_bar_modules=selected%3AOB_winter%2520dinner%2520party_4fbc39bc-0c25-4c38-b678-2f1b2b6540eb&add_refine=Winter%7Cguide%7Cword%7C25)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
