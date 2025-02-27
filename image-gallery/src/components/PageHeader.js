@@ -8,8 +8,6 @@ const PageHeader = () => {
       const showImageForm = () => {
         setShowForm(true);
     };
-
-    console.log('showForm:', showForm)
   
     return (
       <>
