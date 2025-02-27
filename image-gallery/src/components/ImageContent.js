@@ -1,11 +1,10 @@
 import React from 'react';
 import './PageBody.css';
-import {items, tags} from '../data.js'
 
-const ImageContent = () => {
+const ImageContent = ({data, tags}) => {
     return (
         <div className="gallery" id="gallery">
-            {items.map((item) => (
+            {data.map((item) => (
                 <div className="image-card" key={item.id}>
                     <img src={item.imgUrl} alt={item.title} />
                     <div className="image-title truncate-text">{item.title}</div>

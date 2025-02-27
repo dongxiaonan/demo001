@@ -29,7 +29,7 @@ test('renders PageHeader', () => {
 
 
 test('renders FilterBars', () => {
-  render(<FilterBars />);
+  render(<FilterBars data={tags} />);
 
   tags.forEach((tag) => {
     const title = screen.getByText(tag.name);
@@ -38,7 +38,7 @@ test('renders FilterBars', () => {
 });
 
 test('renders ImageContent', () => {
-  render(<ImageContent />);
+  render(<ImageContent data={items} tags={tags}/>);
 
   items.forEach((item) => {
     const title = screen.getByText(item.title);
