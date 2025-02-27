@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="text"], textarea, select {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+input[type="submit"] {
+    padding: 10px 15px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.image-card {
+    border-radius: 5px;
+    padding: 10px;
+}
+.image-title {
+    font-weight: bold;
+}
+
+#toggle-btn {
+    border: 0;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: aquamarine;
+}
+
+.addImage {
+    display: none;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+}
+
+.addImage.open {
+    display: block;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+}
+
+.page-header{
+    display: flex;
+    margin: 10px;
+    /* position: fixed; */
+    justify-content: space-between;
+}
+
+.page-title{
+    display: flex;
+}
+
+.page-title-text{
+    align-content: center;
+}
+
+.logo{
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.search-bar{
+    border-radius: 24px;
+    width: 60%;
+
+}
+
+.filter-bars{
+    display: flex;
+}
+
+.filter-bar{
+    border-radius: 100px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.filter-bar-img{
+    width: 40px;
+    border-radius: 100px;
+    /* height: 30px; */
+    /* align-content: center; */
+    margin: 5px;
+}
+.filter-bar-text{
+    align-content: center;
+    margin: 10px;
+}
+
+.truncate-text{
+    display: -webkit-box; /* For Safari */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis */
+    line-height: 1.5; /* Line height for spacing */
+    max-height: 3em; /* 2 lines x line height */ 
+}
